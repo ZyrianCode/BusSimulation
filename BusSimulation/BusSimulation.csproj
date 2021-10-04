@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommandsManagement\CommandsManagement.csproj" />
+    <ProjectReference Include="..\Models\Models.WPF.csproj" />
+    <ProjectReference Include="..\Services.Game\Data.Services.csproj" />
+    <ProjectReference Include="..\Windows\Windows.csproj" />
+  </ItemGroup>
+
+</Project>

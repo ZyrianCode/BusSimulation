@@ -1,0 +1,30 @@
+﻿<Application x:Class="BusSimulation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BusSimulation"
+             xmlns:views="clr-namespace:BusSimulation.Views"
+             xmlns:viewModels="clr-namespace:BusSimulation.ViewModels"
+             StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type viewModels:BusCreationViewModel}">
+            <views:BusCreationView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:ParkingViewModel}">
+            <views:ParkingView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:InRouteViewModel}">
+            <views:InRouteView/>
+        </DataTemplate>
+
+        <ResourceDictionary x:Key="CommonDictionary">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Common.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
