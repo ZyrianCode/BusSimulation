@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommandsManagement\CommandsManagement.csproj" />
-    <ProjectReference Include="..\Models\Models.WPF.csproj" />
+    <ProjectReference Include="..\Mediators\Repositories\RepositoriesInteraction\Simulation.Data.Services\Simulation.Data.Services.csproj" />
+    <ProjectReference Include="..\Mediators\Repositories\Simulation.Data.Repositories\Simulation.Data.Repositories.csproj" />
     <ProjectReference Include="..\Services.Game\Data.Services.csproj" />
-    <ProjectReference Include="..\Windows\Windows.csproj" />
+    <ProjectReference Include="..\SimulationComponents\Simulation.CommandsManagement\Simulation.CommandsManagement.csproj" />
+    <ProjectReference Include="..\SimulationComponents\Simulation.Models.WPF\Simulation.Models.WPF.csproj" />
+    <ProjectReference Include="..\SimulationComponents\Simulation.Windows\Simulation.Windows.csproj" />
   </ItemGroup>
 
 </Project>

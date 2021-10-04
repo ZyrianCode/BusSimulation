@@ -4,23 +4,23 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows;
+using Simulation.Windows;
 
 namespace BusSimulation.ViewModels
 {
     public class BusViewModel : BaseViewModel
     {
-        private string _BusNumber;
+        private string _busNumber;
 
         [Required][StringLength(6, MinimumLength = 6)] public string BusNumber
         {
-            get => _BusNumber; 
-            set => Set(ref _BusNumber, value);
+            get => _busNumber; 
+            set => Set(ref _busNumber, value);
         }
 
         public override string OnValidate(string propertyName)
         {
-            if (_BusNumber == null)
+            if (_busNumber == null)
             {
                 return "Number can't be null!";
             }

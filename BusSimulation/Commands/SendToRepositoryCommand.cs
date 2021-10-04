@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommandsManagement;
-using Data.Abstract;
-using Data.Services;
-using Data.Services.Abstract;
-using Models.WPF;
+using Simulation.CommandsManagement;
+using Simulation.Data.Repositories.Abstract;
+using Simulation.Data.Services;
+using Simulation.Data.Services.Abstract;
+using Simulation.Models.WPF;
 
 namespace BusSimulation.Commands
 {

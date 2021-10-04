@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domains\Simulation.Domain.Models\Simulation.Domain.Models.csproj" />
+    <ProjectReference Include="..\Repositories\Simulation.Repository.Entities\Simulation.Repository.Entities.csproj" />
+    <ProjectReference Include="..\Simulation.Instruments\Simulation.Instruments.csproj" />
+  </ItemGroup>
+
+</Project>

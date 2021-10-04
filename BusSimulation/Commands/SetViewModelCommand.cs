@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows;
+
 using BusSimulation.ViewModels;
-using CommandsManagement;
+using Simulation.CommandsManagement;
+using Simulation.Windows;
 
 namespace BusSimulation.Commands
 {

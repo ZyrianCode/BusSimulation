@@ -4,8 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows;
-using Models.WPF;
+using Simulation.Models.WPF;
+using Simulation.Windows;
 
 namespace BusSimulation.ViewModels
 {
