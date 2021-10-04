@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusSimulation", "BusSimulation\BusSimulation.csproj", "{826B2498-BC72-46F8-9132-E455C4D95289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusSimulation", "Zyrian\BusSimulation\BusSimulation.csproj", "{826B2498-BC72-46F8-9132-E455C4D95289}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Windows", "SimulationComponents\Simulation.Windows\Simulation.Windows.csproj", "{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Windows", "Zyrian\SimulationComponents\Simulation.Windows\Simulation.Windows.csproj", "{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Instruments", "Mediators\Simulation.Instruments\Simulation.Instruments.csproj", "{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Instruments", "Zyrian\Mediators\Simulation.Instruments\Simulation.Instruments.csproj", "{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation.CommandsManagement", "SimulationComponents\Simulation.CommandsManagement\Simulation.CommandsManagement.csproj", "{75A4AE7F-8367-4474-AF61-B81B9E77E859}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation.CommandsManagement", "Zyrian\SimulationComponents\Simulation.CommandsManagement\Simulation.CommandsManagement.csproj", "{75A4AE7F-8367-4474-AF61-B81B9E77E859}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Models.WPF", "SimulationComponents\Simulation.Models.WPF\Simulation.Models.WPF.csproj", "{8C9DB5C6-60DA-4132-9E86-5C3FBAB22B3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Models.WPF", "Zyrian\SimulationComponents\Simulation.Models.WPF\Simulation.Models.WPF.csproj", "{8C9DB5C6-60DA-4132-9E86-5C3FBAB22B3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Repositories", "Mediators\Repositories\Simulation.Data.Repositories\Simulation.Data.Repositories.csproj", "{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Repositories", "Zyrian\Mediators\Repositories\Simulation.Data.Repositories\Simulation.Data.Repositories.csproj", "{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Mappers", "Mediators\Simulation.Mappers\Simulation.Mappers.csproj", "{A8143CF2-865B-4DFF-8462-F1765218E478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Mappers", "Zyrian\Mediators\Simulation.Mappers\Simulation.Mappers.csproj", "{A8143CF2-865B-4DFF-8462-F1765218E478}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Services", "Mediators\Repositories\RepositoriesInteraction\Simulation.Data.Services\Simulation.Data.Services.csproj", "{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Services", "Zyrian\Mediators\Repositories\RepositoriesInteraction\Simulation.Data.Services\Simulation.Data.Services.csproj", "{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Domain.Models", "Mediators\Domains\Simulation.Domain.Models\Simulation.Domain.Models.csproj", "{5B075309-8842-4027-BBE3-4F1B38A46719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Domain.Models", "Zyrian\Mediators\Domains\Simulation.Domain.Models\Simulation.Domain.Models.csproj", "{5B075309-8842-4027-BBE3-4F1B38A46719}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Repository.Entities", "Mediators\Repositories\Simulation.Repository.Entities\Simulation.Repository.Entities.csproj", "{956CBADC-0350-4C61-BD88-21E215227501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Repository.Entities", "Zyrian\Mediators\Repositories\Simulation.Repository.Entities\Simulation.Repository.Entities.csproj", "{956CBADC-0350-4C61-BD88-21E215227501}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.API", "Simulation.API\Simulation.API.csproj", "{C54B5BEC-381E-4B14-8EED-F0C5F1772F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.API", "Zyrian\Simulation.API\Simulation.API.csproj", "{C54B5BEC-381E-4B14-8EED-F0C5F1772F76}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimulationComponents", "SimulationComponents", "{01CCD4A2-923F-4D79-93BC-5090454B787F}"
 EndProject
@@ -37,7 +37,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{FE40
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameComponents", "GameComponents", "{95A66652-3A63-45EC-A177-E6E5ECBB94DF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Models", "GameComponents\Game.Models\Game.Models.csproj", "{4D971DFB-FEAF-4EA0-ACCA-2F22A6C50E77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Models", "Zyrian\GameComponents\Game.Models\Game.Models.csproj", "{4D971DFB-FEAF-4EA0-ACCA-2F22A6C50E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zyrian", "Zyrian", "{C78CA81D-C6DA-47E7-A5E9-0970645C8104}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{826B2498-BC72-46F8-9132-E455C4D95289} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
 		{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E} = {01CCD4A2-923F-4D79-93BC-5090454B787F}
 		{3D71D0BE-877D-4AB9-B654-69DAC5ECE171} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
 		{75A4AE7F-8367-4474-AF61-B81B9E77E859} = {01CCD4A2-923F-4D79-93BC-5090454B787F}
@@ -107,9 +110,13 @@ Global
 		{D6AD6279-F56C-4C5A-AE5C-995EF2649B55} = {39CA1BEE-5541-483B-A9A6-08717FE94122}
 		{5B075309-8842-4027-BBE3-4F1B38A46719} = {FE40E480-98E4-436F-AF2E-E5F0C3BA27F9}
 		{956CBADC-0350-4C61-BD88-21E215227501} = {71802742-60CE-469B-8226-C4D48263E477}
+		{C54B5BEC-381E-4B14-8EED-F0C5F1772F76} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
+		{01CCD4A2-923F-4D79-93BC-5090454B787F} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
+		{3F132E0E-EF7A-440E-B479-6A1087616D69} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
 		{71802742-60CE-469B-8226-C4D48263E477} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
 		{39CA1BEE-5541-483B-A9A6-08717FE94122} = {71802742-60CE-469B-8226-C4D48263E477}
 		{FE40E480-98E4-436F-AF2E-E5F0C3BA27F9} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
+		{95A66652-3A63-45EC-A177-E6E5ECBB94DF} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
 		{4D971DFB-FEAF-4EA0-ACCA-2F22A6C50E77} = {95A66652-3A63-45EC-A177-E6E5ECBB94DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
