@@ -1,6 +1,8 @@
-﻿namespace Simulation.Domain.Models
+﻿using Simulation.Domain.Models.Abstract;
+
+namespace Simulation.Domain.Models
 {
-    public class Bus
+    public class Bus : DomainEntity
     {
         public string Number { get; set; }
         public string ModelName { get; set; }
