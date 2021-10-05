@@ -5,33 +5,21 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusSimulation", "Zyrian\BusSimulation\BusSimulation.csproj", "{826B2498-BC72-46F8-9132-E455C4D95289}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Windows", "Zyrian\SimulationComponents\Simulation.Windows\Simulation.Windows.csproj", "{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Instruments", "Zyrian\Mediators\Simulation.Instruments\Simulation.Instruments.csproj", "{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Infrastructure", "Zyrian\SimulationComponents\Simulation.Infrastructure\Simulation.Infrastructure.csproj", "{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation.CommandsManagement", "Zyrian\SimulationComponents\Simulation.CommandsManagement\Simulation.CommandsManagement.csproj", "{75A4AE7F-8367-4474-AF61-B81B9E77E859}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Repositories", "Zyrian\Mediators\Repositories\Simulation.Data.Repositories\Simulation.Data.Repositories.csproj", "{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Mappers", "Zyrian\Mediators\Simulation.Mappers\Simulation.Mappers.csproj", "{A8143CF2-865B-4DFF-8462-F1765218E478}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Services", "Zyrian\Mediators\Repositories\Simulation.Data.Services\Simulation.Data.Services.csproj", "{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Domain.Models", "Zyrian\Mediators\Domains\Simulation.Domain.Models\Simulation.Domain.Models.csproj", "{5B075309-8842-4027-BBE3-4F1B38A46719}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Repository.Entities", "Zyrian\Mediators\Repositories\Simulation.Repository.Entities\Simulation.Repository.Entities.csproj", "{956CBADC-0350-4C61-BD88-21E215227501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Domain.Models", "Zyrian\Mediators\Simulation.Domain.Models\Simulation.Domain.Models.csproj", "{5B075309-8842-4027-BBE3-4F1B38A46719}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimulationComponents", "SimulationComponents", "{01CCD4A2-923F-4D79-93BC-5090454B787F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mediators", "Mediators", "{3F132E0E-EF7A-440E-B479-6A1087616D69}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{71802742-60CE-469B-8226-C4D48263E477}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domains", "Domains", "{FE40E480-98E4-436F-AF2E-E5F0C3BA27F9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zyrian", "Zyrian", "{C78CA81D-C6DA-47E7-A5E9-0970645C8104}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Game", "Zyrian\Simulation.Game\Simulation.Game.csproj", "{F1F798F2-C440-448A-9630-7BA499A758AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simulation.Data.Repositories", "Zyrian\Mediators\Simulation.Data.Repositories\Simulation.Data.Repositories.csproj", "{AA08D4D5-51EC-4BA2-B4DA-FC225046753D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,38 +35,22 @@ Global
 		{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D71D0BE-877D-4AB9-B654-69DAC5ECE171}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75A4AE7F-8367-4474-AF61-B81B9E77E859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75A4AE7F-8367-4474-AF61-B81B9E77E859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75A4AE7F-8367-4474-AF61-B81B9E77E859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75A4AE7F-8367-4474-AF61-B81B9E77E859}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8143CF2-865B-4DFF-8462-F1765218E478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8143CF2-865B-4DFF-8462-F1765218E478}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8143CF2-865B-4DFF-8462-F1765218E478}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8143CF2-865B-4DFF-8462-F1765218E478}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6AD6279-F56C-4C5A-AE5C-995EF2649B55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B075309-8842-4027-BBE3-4F1B38A46719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B075309-8842-4027-BBE3-4F1B38A46719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B075309-8842-4027-BBE3-4F1B38A46719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B075309-8842-4027-BBE3-4F1B38A46719}.Release|Any CPU.Build.0 = Release|Any CPU
-		{956CBADC-0350-4C61-BD88-21E215227501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{956CBADC-0350-4C61-BD88-21E215227501}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{956CBADC-0350-4C61-BD88-21E215227501}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{956CBADC-0350-4C61-BD88-21E215227501}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1F798F2-C440-448A-9630-7BA499A758AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1F798F2-C440-448A-9630-7BA499A758AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1F798F2-C440-448A-9630-7BA499A758AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1F798F2-C440-448A-9630-7BA499A758AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA08D4D5-51EC-4BA2-B4DA-FC225046753D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA08D4D5-51EC-4BA2-B4DA-FC225046753D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA08D4D5-51EC-4BA2-B4DA-FC225046753D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA08D4D5-51EC-4BA2-B4DA-FC225046753D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,18 +58,12 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{826B2498-BC72-46F8-9132-E455C4D95289} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
 		{E87A806F-7AE9-4B0F-B4BA-954A1C9D3B0E} = {01CCD4A2-923F-4D79-93BC-5090454B787F}
-		{3D71D0BE-877D-4AB9-B654-69DAC5ECE171} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
 		{75A4AE7F-8367-4474-AF61-B81B9E77E859} = {01CCD4A2-923F-4D79-93BC-5090454B787F}
-		{78C9C2CC-6EF2-4DA9-B6A9-A6A80B22C008} = {71802742-60CE-469B-8226-C4D48263E477}
-		{A8143CF2-865B-4DFF-8462-F1765218E478} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
-		{D6AD6279-F56C-4C5A-AE5C-995EF2649B55} = {71802742-60CE-469B-8226-C4D48263E477}
-		{5B075309-8842-4027-BBE3-4F1B38A46719} = {FE40E480-98E4-436F-AF2E-E5F0C3BA27F9}
-		{956CBADC-0350-4C61-BD88-21E215227501} = {71802742-60CE-469B-8226-C4D48263E477}
+		{5B075309-8842-4027-BBE3-4F1B38A46719} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
 		{01CCD4A2-923F-4D79-93BC-5090454B787F} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
 		{3F132E0E-EF7A-440E-B479-6A1087616D69} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
-		{71802742-60CE-469B-8226-C4D48263E477} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
-		{FE40E480-98E4-436F-AF2E-E5F0C3BA27F9} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
 		{F1F798F2-C440-448A-9630-7BA499A758AE} = {C78CA81D-C6DA-47E7-A5E9-0970645C8104}
+		{AA08D4D5-51EC-4BA2-B4DA-FC225046753D} = {3F132E0E-EF7A-440E-B479-6A1087616D69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB484186-4DCB-46E7-B6C7-86C309F1629A}

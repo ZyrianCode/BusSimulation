@@ -4,8 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Simulation.Windows;
-using BusWpfModel = BusSimulation.Models.BusWpfModel;
+using BusSimulation.Models;
+using Simulation.Infrastructure.ViewModelAbstractComponents;
+
+
 
 namespace BusSimulation.ViewModels
 {

@@ -6,8 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Simulation.Data.Repositories;
-using Simulation.Data.Repositories.Abstract;
-using Simulation.Data.Services;
+using Simulation.Data.Repositories.Repositories;
+using Simulation.Data.Repositories.Repositories.Abstract;
+using Simulation.Data.Repositories.Services;
 using Simulation.Domain.Models;
 
 namespace BusSimulation

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 using BusSimulation.ViewModels;
 using Simulation.CommandsManagement;
-using Simulation.Windows;
+using Simulation.Infrastructure.ViewModelAbstractComponents;
+
 
 namespace BusSimulation.Commands
 {

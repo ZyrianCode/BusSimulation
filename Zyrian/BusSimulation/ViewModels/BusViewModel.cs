@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Simulation.Infrastructure.ViewModelAbstractComponents;
 using Simulation.Windows;
 
 namespace BusSimulation.ViewModels

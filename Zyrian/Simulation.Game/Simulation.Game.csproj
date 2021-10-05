@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mediators\Domains\Simulation.Domain.Models\Simulation.Domain.Models.csproj" />
+    <ProjectReference Include="..\Mediators\Simulation.Domain.Models\Simulation.Domain.Models.csproj" />
   </ItemGroup>
 
 </Project>

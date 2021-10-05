@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using BusSimulation.Commands;
-using Simulation.Windows;
+using Simulation.Infrastructure.ViewModelAbstractComponents;
 
 namespace BusSimulation.ViewModels
 {
