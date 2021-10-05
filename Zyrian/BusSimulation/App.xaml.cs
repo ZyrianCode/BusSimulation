@@ -19,6 +19,6 @@ namespace BusSimulation
     public partial class App : Application
     {
         static IRepository repository = new Repository();
-        TestService<Bus> testService = new(repository);
+        RepositoryService<Bus> testService = new(repository);
     }
 }

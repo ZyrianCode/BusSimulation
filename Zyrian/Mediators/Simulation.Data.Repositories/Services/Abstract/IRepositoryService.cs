@@ -3,7 +3,7 @@ using Simulation.Domain.Models.Abstract;
 
 namespace Simulation.Data.Repositories.Services.Abstract
 {
-    public interface ITestService<TDomainModel> where TDomainModel : IDomainEntity
+    public interface IRepositoryService<TDomainModel> where TDomainModel : IDomainEntity
     {
         public void Add(TDomainModel domainModel);
         public void RemoveById(string id);

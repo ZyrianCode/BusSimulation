@@ -8,11 +8,11 @@ using Simulation.Domain.Models.Abstract;
 
 namespace Simulation.Data.Repositories.Services
 {
-    public class TestService<TDomainModel> : ITestService<TDomainModel> where TDomainModel : IDomainEntity 
+    public class RepositoryService<TDomainModel> : IRepositoryService<TDomainModel> where TDomainModel : IDomainEntity 
     {
         private readonly IRepository _repository;
 
-        public TestService(IRepository repository)
+        public RepositoryService(IRepository repository)
         {
             _repository = repository;
         }
