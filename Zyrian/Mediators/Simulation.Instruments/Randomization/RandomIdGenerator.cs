@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Simulation.Instruments.Randomization
 {
-    public class RandomIdGenerator
+    public class RandomIdGenerator : IRandomIdGenerator
     {
         private string _alphabet;
 

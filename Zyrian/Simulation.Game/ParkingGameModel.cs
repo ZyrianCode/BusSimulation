@@ -1,6 +1,6 @@
 ﻿using Simulation.Domain.Models;
 
-namespace Game.Models
+namespace Simulation.Game
 {
     public class ParkingGameModel : Parking
     {

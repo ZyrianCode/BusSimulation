@@ -26,8 +26,8 @@ namespace Simulation.Mappers
                 NumberOfRoute = bus.NumberOfRoute,
                 DriverName = bus.DriverName,
 
-                Id = new RandomIdGenerator().GenerateId(),
-                CreationDate = DateTime.Now
+                //Id = new RandomIdGenerator().GenerateId(),
+                //CreationDate = DateTime.Now
             };
         }
 

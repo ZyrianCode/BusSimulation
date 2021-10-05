@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Simulation.Models.WPF;
+using BusSimulation.Models;
 using Simulation.Windows;
 
 namespace BusSimulation.ViewModels
@@ -18,6 +18,5 @@ namespace BusSimulation.ViewModels
         {
             _parking = new();
         }
-        
     }
 }

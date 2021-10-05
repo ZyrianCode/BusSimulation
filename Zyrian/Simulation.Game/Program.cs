@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Game.Models
+namespace Simulation.Game
 {
     class Program
     {

@@ -23,8 +23,8 @@ namespace Simulation.Mappers
             {
                 BusStation = parkingModel.BusStation.Select(busModel => busModel.ToEntity()).ToList(),
 
-                Id = new RandomIdGenerator().GenerateId(),
-                CreationDate = DateTime.Now
+                //Id = new RandomIdGenerator().GenerateId(),
+                //CreationDate = DateTime.Now
             };
         }
 

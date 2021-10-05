@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Simulation.Instruments.Randomization;
+using System;
 
 namespace Simulation.Repository.Entities.Abstract
 {
@@ -7,7 +8,9 @@ namespace Simulation.Repository.Entities.Abstract
     /// </summary>
     public abstract class BaseEntity : IBaseEntity
     {
-        public string Id { get; set; }
-        public DateTime CreationDate { get; set; }
+        private static readonly IRandomIdGenerator IdGenerator = new RandomIdGenerator();
+
+        public string Id { get; set; } = IdGenerator.GenerateId();
+        public DateTime CreationDate { get; set; } = DateTime.Now;
     }
 }

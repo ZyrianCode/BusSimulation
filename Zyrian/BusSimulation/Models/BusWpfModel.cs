@@ -1,6 +1,6 @@
 ﻿using Simulation.Domain.Models;
 
-namespace Simulation.Models.WPF
+namespace BusSimulation.Models
 {
     public class BusWpfModel : Bus
     {
