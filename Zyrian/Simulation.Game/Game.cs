@@ -7,6 +7,7 @@ using Simulation.Data.Repositories.Services.Abstract;
 using Simulation.Domain.Models;
 using Simulation.Domain.Models.Abstract;
 using Simulation.Game.Events;
+using Simulation.Game.Scenarios;
 
 namespace Simulation.Game
 {
@@ -14,11 +15,11 @@ namespace Simulation.Game
     {
         private readonly IRepositoryService<IDomainEntity> _repository;
         private List<string> _idList;
-        private ParkingGameModel _parking;
-        private List<BusGameModel> _busesOnTheWay = new();
 
-        private event EventHandler<BusEventArgs> BusLeaved;
-        private event EventHandler<BusEventArgs> BusArrived;
+        private ParkingGameModel _parking;
+        private readonly List<BusGameModel> _busesOnTheWay = new();
+
+        private SceneActions _sceneActions;
 
         public Game(IRepositoryService<IDomainEntity> repository)
         {
@@ -29,7 +30,8 @@ namespace Simulation.Game
         {
             ReceiveIdList();
             LoadEntities();
-
+            _sceneActions = new(_parking, _busesOnTheWay);
+            StartScenarios();
         }
 
         private void ReceiveIdList() => _idList = _repository.GetExistedIdList();
@@ -41,44 +43,18 @@ namespace Simulation.Game
             _parking = _repository.GetById(GetIdFromList()) as ParkingGameModel;
         }
 
-        private void BusLeavesParkingAction()
+
+        private void StartScenarios()
         {
-            BusGameModel bus = _parking.BusStation[new Random().Next(0, _parking.BusStation.Count)] as BusGameModel;
-            _busesOnTheWay.Add(bus);
-            _parking.BusStation.Remove(bus);
+            new ScenariosBuilder(_sceneActions).BusLeavesFromParking()
+                .BusArrivesToParking()
+                .Build();
 
-            PrintInfo();
-            BusLeaved?.Invoke(this, new BusEventArgs(bus));
-            BusLeaved -= OnBusLeavedLog;
-        }
+            new ScenariosBuilder(_sceneActions).BusArrivesToParking().Build();
 
-        private void BusArrivesToParkingAction()
-        {
-            BusGameModel bus = _busesOnTheWay[new Random().Next(0, _parking.BusStation.Count)];
-            _parking.BusStation.Add(bus);
-            _busesOnTheWay.Remove(bus);
+            new ScenariosBuilder(_sceneActions).BusArrivesToParking().Build();
 
-            PrintInfo();
-            BusArrived?.Invoke(this, new BusEventArgs(bus));
-            BusArrived -= OnBusArrivedLog;
-        }
-
-        private void PrintInfo()
-        {
-            BusArrived += OnBusArrivedLog;
-            BusLeaved += OnBusLeavedLog;
-        }
-
-        private void OnBusArrivedLog(object sender, BusEventArgs eventArgs)
-        {
-            Console.WriteLine($"Автобус {eventArgs.Bus.NumberOfRoute} модели {eventArgs.Bus.ModelName} " +
-                              $"с номером {eventArgs.Bus.Number} прибыл на стоянку! ");
-        }
-
-        private void OnBusLeavedLog(object sender, BusEventArgs eventArgs)
-        {
-            Console.WriteLine($"Автобус {eventArgs.Bus.NumberOfRoute} модели {eventArgs.Bus.ModelName} " +
-                              $"с номером {eventArgs.Bus.Number} выехал со стоянки! ");
+            new ScenariosBuilder(_sceneActions).BusLeavesFromParking().Build();
         }
     }
 }
