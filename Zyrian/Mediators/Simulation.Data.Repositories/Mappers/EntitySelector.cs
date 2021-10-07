@@ -6,9 +6,9 @@ using Simulation.Domain.Models.Abstract;
 
 namespace Simulation.Data.Repositories.Mappers
 {
-    public class MapperSelector
+    public class EntitySelector
     {
-        public IBaseRepositoryEntity SelectMapper(IDomainEntity domainEntity)
+        public IBaseRepositoryEntity SelectEntity(IDomainEntity domainEntity)
         {
             if (domainEntity is Bus bus)
             {
@@ -29,7 +29,7 @@ namespace Simulation.Data.Repositories.Mappers
             };
         }
 
-        public IDomainEntity SelectMapper(IBaseRepositoryEntity repositoryEntity)
+        public IDomainEntity SelectEntity(IBaseRepositoryEntity repositoryEntity)
         {
             if (repositoryEntity is BusRepositoryEntity busRepositoryEntity)
             {
