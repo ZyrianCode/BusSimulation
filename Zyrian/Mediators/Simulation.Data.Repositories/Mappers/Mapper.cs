@@ -11,11 +11,11 @@ namespace Simulation.Data.Repositories.Mappers
         /// <summary>
         /// Метод конвертации доменного объекта в сущность репозитория
         /// </summary>
-        /// <param name="domainModel"> доменный объект </param>
+        /// <param name="domainEntity"> доменный объект </param>
         /// <returns></returns>
-        public static IBaseRepositoryEntity ToRepositoryEntity(this IDomainEntity domainModel)
+        public static IBaseRepositoryEntity ToRepositoryEntity(this IDomainEntity domainEntity)
         {
-            return EntitySelector.SelectEntity(domainModel);
+            return EntitySelector.SelectEntity(domainEntity);
         }
 
         /// <summary>

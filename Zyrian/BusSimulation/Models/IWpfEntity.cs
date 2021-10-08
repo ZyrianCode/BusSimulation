@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Simulation.Domain.Models.Abstract
+namespace BusSimulation.Models
 {
-    public interface IDomainEntity : IBaseEntity
+    public interface IWpfEntity
     {
     }
 }

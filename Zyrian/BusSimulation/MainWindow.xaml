@@ -9,7 +9,7 @@
         d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
         mc:Ignorable="d"
         
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="900">
     <Window.Resources>
         <commands:CloseApplicationCommand x:Key="CloseApplicationCommand"></commands:CloseApplicationCommand>
     </Window.Resources>

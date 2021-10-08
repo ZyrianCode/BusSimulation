@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:BusSimulation"
              xmlns:views="clr-namespace:BusSimulation.Views"
              xmlns:viewModels="clr-namespace:BusSimulation.ViewModels"
-             StartupUri="MainWindow.xaml">
+             >
 
     <Application.Resources>
 

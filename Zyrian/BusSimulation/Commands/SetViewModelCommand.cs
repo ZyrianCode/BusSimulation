@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using BusSimulation.ViewModels;
 using Simulation.CommandsManagement;
+using Simulation.Data.Repositories.Services.Abstract;
+using Simulation.Domain.Models.Abstract;
+using Simulation.Game;
 using Simulation.Infrastructure.ViewModelAbstractComponents;
 
 
@@ -14,6 +17,7 @@ namespace BusSimulation.Commands
     public class SetViewModelCommand : Command
     {
         private readonly MainViewModel _viewModel;
+
 
         private readonly List<BaseViewModel> _viewModels = new()
         {

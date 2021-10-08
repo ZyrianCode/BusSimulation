@@ -5,6 +5,6 @@ namespace Simulation.Data.Repositories.Entities
 {
     public class ParkingRepositoryEntity : RepositoryEntity
     {
-        public List<BusRepositoryEntity> BusStation = new();
+        public List<BusRepositoryEntity> BusStation{ get; set; }
     }
 }

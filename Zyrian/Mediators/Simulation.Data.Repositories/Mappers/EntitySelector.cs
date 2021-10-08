@@ -8,9 +8,9 @@ namespace Simulation.Data.Repositories.Mappers
 {
     public class EntitySelector
     {
-        public IBaseRepositoryEntity SelectEntity(IDomainEntity domainEntity)
+        public IBaseRepositoryEntity SelectEntity(IDomainEntity baseEntity)
         {
-            if (domainEntity is Bus bus)
+            if (baseEntity is Bus bus)
             {
                 return new BusRepositoryEntity()
                 {
@@ -23,7 +23,7 @@ namespace Simulation.Data.Repositories.Mappers
 
             return new ParkingRepositoryEntity
             {
-                BusStation = (domainEntity as Parking)?.BusStation
+                BusStation = (baseEntity as Parking)?.BusStation
                     .Select(busEntity => busEntity.ToRepositoryEntity())
                     .Cast<BusRepositoryEntity>().ToList()
             };

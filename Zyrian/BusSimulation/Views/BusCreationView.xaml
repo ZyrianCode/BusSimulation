@@ -3,16 +3,101 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BusSimulation.Views"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:local="clr-namespace:BusSimulation.Views" 
+      xmlns:viewmodels="clr-namespace:BusSimulation.ViewModels" 
+      d:DataContext="{d:DesignInstance Type=viewmodels:BusCreationViewModel}"
+             mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
       >
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="TabItemBackground" Color="#FF1B263C"/>
+
+    </UserControl.Resources>
 
     <Grid>
-        <Label Content="BusCreation" HorizontalContentAlignment="Center"  HorizontalAlignment="Center" VerticalAlignment="Top" 
-               Margin="0,55,0,0" 
-               Width="110" 
-               Foreground="White" FontFamily="Segoe UI Black" FontSize="15"/>
+
+        <TabControl Background="#FF1B263C" BorderThickness="0,0,0,0">
+            <TabItem Header="Creation" BorderBrush="#FF1B263C"  BorderThickness="0,0,0,0" Background="{DynamicResource TabItemBackground}" Foreground="White">
+                <Grid>
+                    <Label Content="{Binding ViewModelName}" HorizontalContentAlignment="Center"  HorizontalAlignment="Center" VerticalAlignment="Top" 
+                           Margin="0,55,0,0" 
+                           Width="110" 
+                           Foreground="White" FontFamily="Segoe UI Black" FontSize="15" Height="33"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="46,160,0,0" Text="BusNumber" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="46,190,0,0" Text="ModelName" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="46,220,0,0" Text="RouteNumber" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="46,250,0,0" Text="DriverName" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+
+                    <TextBox HorizontalAlignment="Left" Margin="155,160,0,0" Text="{Binding BusNumber, UpdateSourceTrigger=PropertyChanged }" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="155,190,0,0" Text="{Binding ModelName,  UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="155,220,0,0" Text="{Binding RouteNumber, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="155,250,0,0" Text="{Binding DriverName, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                    <Button Content="AddBus" Command="{Binding AddBus}" HorizontalAlignment="Left" Margin="169,304,0,0" VerticalAlignment="Top" Width="92" Height="35" Background="#FF2D4F65" Foreground="White"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="410,160,0,0" Text="ParkingName" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="410,190,0,0" Text="ParkingDescription" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+
+                    <TextBox HorizontalAlignment="Left" Margin="576,160,0,0" Text="{Binding ParkingName, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="576,190,0,0" Text="{Binding ParkingDescription, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+                    <Button Content="AddParking" Command="{Binding AddParking}" HorizontalAlignment="Left" Margin="451,304,0,0"  Width="100" Height="35" VerticalAlignment="Top" Background="#FF2D4F65" Foreground="White"/>
+                    <Button Content="RemoveParking" Command="{Binding RemoveParking}" CommandParameter="{Binding SelectedParking}" HorizontalAlignment="Left" Margin="576,304,0,0"  Width="100" Height="35" VerticalAlignment="Top" Background="#FF2D4F65" Foreground="White"/>
+                    <Button Content="AddToRepository" Command="{Binding SendParkingToRepository}" HorizontalAlignment="Left" Margin="500,350,0,0"  Width="120" Height="35" VerticalAlignment="Top" Background="#FF2D4F65" Foreground="White"/>
+
+                    <Button Content="StartGame" Command="{Binding StartGame}" HorizontalAlignment="Left" Margin="169,350,0,0" VerticalAlignment="Top" Width="92" Height="35" Background="#FF2D4F65" Foreground="White"/>
+
+
+
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Visualization" Background="#FF1B263C" BorderBrush="#FF1B263C" BorderThickness="0,0,0,0" Foreground="White">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="230"></ColumnDefinition>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Grid.Column="0" Header="Парковки" BorderBrush="#FF1879B7" Foreground="White" BorderThickness="0,0,0,0">
+                        <DockPanel>
+                            <UniformGrid DockPanel.Dock="Bottom" Rows="1" Margin="0, 3">
+                                <Button Content="Удалить" Command="{Binding RemoveBus}" CommandParameter="{Binding SelectedParking.BusStation}"></Button>
+                            </UniformGrid>
+                            <ListBox ItemsSource="{Binding Parking}"
+                                     DisplayMemberPath="ParkingName"
+                                     SelectedItem="{Binding SelectedParking}" 
+                                     Background="#FF364769" Foreground="White"></ListBox>
+                        </DockPanel>
+                        
+                    </GroupBox>
+
+                    <GroupBox Grid.Column="1" Header="{Binding SelectedParking.ParkingName, FallbackValue='Автобусы', TargetNullValue='Автобусы не найдены'}" Foreground="White" BorderThickness="0,0,0,0">
+                        <DataGrid ItemsSource="{Binding SelectedParking.BusStation}" 
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  GridLinesVisibility="Vertical"
+                                  VerticalGridLinesBrush="#FF364769"
+                                  AlternatingRowBackground="#FF364769"
+                                  Background="#FF364769" Foreground="Black">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Номер автобуса" Binding="{Binding Number}"/>
+                                <DataGridTextColumn Header="Номер маршрута" Binding="{Binding NumberOfRoute}"/>
+                                <DataGridTextColumn Header="Наименование модели" Binding="{Binding ModelName}"/>
+                                <DataGridTextColumn Header="Имя водителя" Binding="{Binding DriverName}"/>
+                                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="Auto"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </GroupBox>
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
 
     </Grid>
 </UserControl>

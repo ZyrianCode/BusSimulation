@@ -3,13 +3,13 @@ using Simulation.Domain.Models.Abstract;
 
 namespace Simulation.Data.Repositories.Services.Abstract
 {
-    public interface IRepositoryService<TDomainModel> where TDomainModel : IDomainEntity
+    public interface IRepositoryService<TDomainEntity> where TDomainEntity : IDomainEntity
     {
-        public void Add(TDomainModel domainModel);
+        public void Add(TDomainEntity domainEntity);
         public void RemoveById(string id);
-        public TDomainModel GetById(string id);
-        public void Update(TDomainModel domainModel);
-        public List<TDomainModel> CloneRepository();
+        public TDomainEntity GetById(string id);
+        public void Update(TDomainEntity domainEntity);
+        public List<TDomainEntity> CloneRepository();
         public List<string> GetExistedIdList();
         public void Clear();
     }

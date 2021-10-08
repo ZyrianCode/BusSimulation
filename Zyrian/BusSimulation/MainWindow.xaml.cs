@@ -1,5 +1,8 @@
 ﻿using System.Windows;
 using BusSimulation.ViewModels;
+using Simulation.Data.Repositories.Services.Abstract;
+using Simulation.Domain.Models.Abstract;
+using Simulation.Game;
 
 namespace BusSimulation
 {

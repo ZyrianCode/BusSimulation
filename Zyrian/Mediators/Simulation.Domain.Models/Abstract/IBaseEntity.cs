@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Simulation.Domain.Models.Abstract
 {
-    public interface IDomainEntity : IBaseEntity
+    public interface IBaseEntity
     {
     }
 }

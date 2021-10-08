@@ -1,8 +1,11 @@
-﻿using Simulation.Domain.Models;
-
-namespace Simulation.Game
+﻿
+namespace Simulation.Game.Models
 {
-    public class BusGameModel : Bus
+    public class BusGameModel : IGameEntity
     {
+        public string Number { get; set; }
+        public string ModelName { get; set; }
+        public string NumberOfRoute { get; set; }
+        public string DriverName { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Simulation.Game.Events;
+using Simulation.Game.Models;
 
 namespace Simulation.Game.Scenarios
 {
@@ -20,7 +21,7 @@ namespace Simulation.Game.Scenarios
 
         public void BusLeavesParkingAction()
         {
-            BusGameModel bus = _parking.BusStation[new Random().Next(0, _parking.BusStation.Count)] as BusGameModel;
+            BusGameModel bus = _parking.BusStation[new Random().Next(0, _parking.BusStation.Count)];
             _busesOnTheWay.Add(bus);
             _parking.BusStation.Remove(bus);
 

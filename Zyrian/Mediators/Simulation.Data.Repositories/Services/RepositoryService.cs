@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Simulation.Data.Repositories.Entities.Abstract;
 using Simulation.Data.Repositories.Mappers;
 using Simulation.Data.Repositories.Repositories.Abstract;
 using Simulation.Data.Repositories.Services.Abstract;
@@ -8,7 +9,7 @@ using Simulation.Domain.Models.Abstract;
 
 namespace Simulation.Data.Repositories.Services
 {
-    public class RepositoryService<TDomainModel> : IRepositoryService<TDomainModel> where TDomainModel : IDomainEntity 
+    public class RepositoryService<TDomainEntity> : IRepositoryService<TDomainEntity> where TDomainEntity : IDomainEntity 
     {
         private readonly IRepository _repository;
 
@@ -16,9 +17,9 @@ namespace Simulation.Data.Repositories.Services
         {
             _repository = repository;
         }
-        public void Add(TDomainModel domainModel)
+        public void Add(TDomainEntity domainEntity)
         {
-            _repository.Add(domainModel.ToRepositoryEntity());
+            _repository.Add(domainEntity.ToRepositoryEntity());
         }
 
         public void RemoveById(string id)
@@ -26,19 +27,19 @@ namespace Simulation.Data.Repositories.Services
             _repository.RemoveById(id);
         }
 
-        public TDomainModel GetById(string id)
+        public TDomainEntity GetById(string id)
         {
-            return (TDomainModel)_repository.GetById(id).ToDomain();
+            return (TDomainEntity)_repository.GetById(id).ToDomain();
         }
 
-        public void Update(TDomainModel domainModel)
+        public void Update(TDomainEntity domainEntity)
         {
-            _repository.Update(domainModel.ToRepositoryEntity());
+            _repository.Update(domainEntity.ToRepositoryEntity());
         }
 
-        public List<TDomainModel> CloneRepository()
+        public List<TDomainEntity> CloneRepository()
         {
-            return _repository.Clone().ToDomain().Cast<TDomainModel>().ToList();
+            return _repository.Clone().ToDomain().Cast<TDomainEntity>().ToList();
         }
 
         public List<string> GetExistedIdList()
