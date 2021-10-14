@@ -43,6 +43,12 @@ namespace Simulation.Data.Repositories.Repositories.Abstract
         public List<string> GetExistedIdList();
 
         /// <summary>
+        ///  Возвращает количество элементов в репозитории
+        /// </summary>
+        /// <returns></returns>
+        public int GetRepositoryItemsCount();
+
+        /// <summary>
         /// Очищает репозиторий
         /// </summary>
         public void Clear();

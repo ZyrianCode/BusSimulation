@@ -43,6 +43,11 @@ namespace Simulation.Data.Repositories.Repositories
             return Entities.Select(entity => entity.Id).ToList();
         }
 
+        public int GetRepositoryItemsCount()
+        {
+            return Entities.Count;
+        }
+
         public void Clear()
         {
             Entities.Clear();

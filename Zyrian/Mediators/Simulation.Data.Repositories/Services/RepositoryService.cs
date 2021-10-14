@@ -47,6 +47,11 @@ namespace Simulation.Data.Repositories.Services
             return _repository.GetExistedIdList();
         }
 
+        public int GetRepositoryItemsCount()
+        {
+            return _repository.GetRepositoryItemsCount();
+        }
+
         public void Clear()
         {
             _repository.Clear();

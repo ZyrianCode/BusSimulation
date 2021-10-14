@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -157,7 +158,7 @@ namespace BusSimulation.ViewModels
 
                 public ICommand StartGame { get; }
 
-                private bool CanStartGameExecuteCommand(object p) => true;
+                private bool CanStartGameExecuteCommand(object p) => _repositoryService.GetRepositoryItemsCount() > 0;
 
                 private void OnStartedGameCommandExecuted(object p)
                 {

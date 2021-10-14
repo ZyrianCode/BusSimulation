@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Simulation.Game.Events;
 using Simulation.Game.Models;
 
@@ -25,7 +26,7 @@ namespace Simulation.Game.Scenarios
             _busesOnTheWay.Add(bus);
             _parking.BusStation.Remove(bus);
 
-            PrintInfo();
+            BusLeaved += OnBusLeavedLog;
             BusLeaved?.Invoke(this, new BusEventArgs(bus));
             BusLeaved -= OnBusLeavedLog;
         }
@@ -36,27 +37,27 @@ namespace Simulation.Game.Scenarios
             _parking.BusStation.Add(bus);
             _busesOnTheWay.Remove(bus);
 
-            PrintInfo();
+            BusArrived += OnBusArrivedLog;
             BusArrived?.Invoke(this, new BusEventArgs(bus));
             BusArrived -= OnBusArrivedLog;
         }
 
-        private void PrintInfo()
-        {
-            BusArrived += OnBusArrivedLog;
-            BusLeaved += OnBusLeavedLog;
-        }
 
         private void OnBusArrivedLog(object sender, BusEventArgs eventArgs)
         {
             Console.WriteLine($"Автобус {eventArgs.Bus.NumberOfRoute} модели {eventArgs.Bus.ModelName} " +
                               $"с номером {eventArgs.Bus.Number} прибыл на стоянку! ");
+            Debug.WriteLine($"Автобус {eventArgs.Bus.NumberOfRoute} модели {eventArgs.Bus.ModelName} " +
+                            $"с номером {eventArgs.Bus.Number} прибыл на стоянку! ");
         }
 
         private void OnBusLeavedLog(object sender, BusEventArgs eventArgs)
         {
             Console.WriteLine($"Автобус {eventArgs.Bus.NumberOfRoute} модели {eventArgs.Bus.ModelName} " +
                               $"с номером {eventArgs.Bus.Number} выехал со стоянки! ");
+            Debug.WriteLine($"Автобус {eventArgs.Bus.NumberOfRoute} модели {eventArgs.Bus.ModelName} " +
+                            $"с номером {eventArgs.Bus.Number} выехал со стоянки! ");
+            
         }
     }
 }
